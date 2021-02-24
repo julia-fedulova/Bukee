@@ -1280,6 +1280,10 @@ h3 {
   margin-bottom: 5px;
 }
 
+.footer-block__link {
+   text-decoration: none;
+}
+
 .footer-block__social {
   list-style-type: none;
   display: -webkit-box;
