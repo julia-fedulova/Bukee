@@ -1281,7 +1281,8 @@ h3 {
 }
 
 .footer-block__link {
-   text-decoration: none;
+    text-decoration: none;
+    color: #9191b5;
 }
 
 .footer-block__social {
