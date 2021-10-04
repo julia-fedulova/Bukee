@@ -201,6 +201,13 @@ anchor.addEventListener("click", function (e) {
     block: "start"
   });
 });
+var aboutBlockButton = document.querySelector(".about-block-table__button");
+var nextItems = document.querySelector(".about-block-table__list_next");
+
+aboutBlockButton.onclick = function () {
+  nextItems.style.display = 'block';
+  aboutBlockButton.style.display = 'none';
+};
 
 /***/ })
 
