@@ -189,7 +189,10 @@ var anchor = document.querySelector('.arrow-up');
 var mainPage = document.querySelector('.main-page');
 var mainPageBottom = mainPage.getBoundingClientRect().bottom + window.pageYOffset;
 window.addEventListener('scroll', function () {
-  if (window.pageYOffset < mainPageBottom) anchor.style.opacity = '0';else anchor.style.opacity = '1';
+  if (window.pageYOffset < mainPageBottom) anchor.style.opacity = '0';else {
+    anchor.style.opacity = '0.6';
+    anchor.style.visibility = 'visible';
+  }
 });
 anchor.addEventListener("click", function (e) {
   e.preventDefault();
@@ -200,6 +203,12 @@ anchor.addEventListener("click", function (e) {
     behavior: "smooth",
     block: "start"
   });
+});
+anchor.addEventListener("mouseover", function (e) {
+  anchor.style.opacity = '1';
+});
+anchor.addEventListener("mouseout", function (e) {
+  anchor.style.opacity = '0.6';
 });
 var aboutBlockButton = document.querySelector(".about-block-table__button");
 var nextItems = document.querySelector(".about-block-table__list_next");
