@@ -137,6 +137,70 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 
+var menuButton = document.querySelector(".button__menu");
+var closeButton = document.querySelector(".button__menu_close");
+var menu = document.querySelector(".header-list");
+var header = document.querySelector(".header");
+var logo = document.querySelector(".header__logo");
+
+menuButton.onclick = function () {
+  menu.classList.add("show");
+  header.classList.add("show");
+  logo.style.display = "none";
+  menuButton.style.display = "none";
+};
+
+closeButton.onclick = function () {
+  menu.classList.remove("show");
+  header.classList.remove("show");
+  logo.style.display = "block";
+  menuButton.style.display = "block";
+};
+
+function runningNumbers(num, elem, step, time) {
+  var element = document.querySelector('.' + elem);
+  var n = 0;
+  var t = Math.round(time / (num / step));
+  var interval = setInterval(function () {
+    n = n + step;
+
+    if (n >= num) {
+      clearInterval(interval);
+      n = num;
+    }
+
+    element.innerHTML = n;
+  }, t);
+}
+
+var counter = document.querySelector('.counter-block');
+var counterTop = counter.getBoundingClientRect().top + window.pageYOffset;
+var counterBottom = counter.getBoundingClientRect().bottom + window.pageYOffset;
+var counterHeight = counterBottom - counterTop;
+window.addEventListener('scroll', function onScroll() {
+  if (window.pageYOffset > counterTop - window.innerHeight + counterHeight) {
+    this.removeEventListener('scroll', onScroll);
+    runningNumbers(12, "counter-block__published", 2, 700);
+    runningNumbers(5, "counter-block__bestsellers", 1, 500);
+    runningNumbers(15000, "counter-block__readers", 367, 1600);
+  }
+});
+var anchor = document.querySelector('.arrow-up');
+var mainPage = document.querySelector('.main-page');
+var mainPageBottom = mainPage.getBoundingClientRect().bottom + window.pageYOffset;
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset < mainPageBottom) anchor.style.opacity = '0';else anchor.style.opacity = '1';
+});
+anchor.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  var _goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body';
+
+  document.querySelector(_goto).scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
 
 /***/ })
 
