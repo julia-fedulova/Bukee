@@ -464,6 +464,7 @@ h3 {
   bottom: 40px;
   font-size: 50px;
   color: #65e496;
+  opacity: 0;
   transition: 0.4s;
 }
 
@@ -1483,6 +1484,12 @@ h3 {
 }
 
 @media (max-width: 1020px) {
+  .arrow-up {
+    right: 30px;
+    bottom: 30px;
+    font-size: 40px;
+  }
+
   .header {
     padding: 50px 15px;
     -webkit-box-orient: vertical;
@@ -1724,6 +1731,10 @@ h3 {
 }
 
 @media (max-width: 780px) {
+  .arrow-up {
+    font-size: 0;
+  }
+
   .main-page {
     background: #446d88;
     background: linear-gradient(90deg, #446d88 0%, #4c9294 100%);
