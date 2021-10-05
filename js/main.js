@@ -138,23 +138,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 
 var menuButton = document.querySelector(".button__menu");
-var closeButton = document.querySelector(".button__menu_close");
-var menu = document.querySelector(".header-list");
-var header = document.querySelector(".header");
-var logo = document.querySelector(".header__logo");
+var closeButton = document.querySelector(".burger-menu-button");
+var burgerMenu = document.querySelector(".burger-menu");
 
 menuButton.onclick = function () {
-  menu.classList.add("show");
-  header.classList.add("show");
-  logo.style.display = "none";
-  menuButton.style.display = "none";
+  burgerMenu.classList.add("active");
 };
 
 closeButton.onclick = function () {
-  menu.classList.remove("show");
-  header.classList.remove("show");
-  logo.style.display = "block";
-  menuButton.style.display = "block";
+  burgerMenu.classList.remove("active");
 };
 
 function runningNumbers(num, elem, step, time) {
@@ -214,8 +206,18 @@ var aboutBlockButton = document.querySelector(".about-block-table__button");
 var nextItems = document.querySelector(".about-block-table__list_next");
 
 aboutBlockButton.onclick = function () {
-  nextItems.style.display = 'block';
-  aboutBlockButton.style.display = 'none';
+  if (!aboutBlockButton.classList.contains('close')) {
+    nextItems.style.opacity = '1';
+    nextItems.style.visibility = 'visible';
+    aboutBlockButton.innerHTML = 'Close';
+    aboutBlockButton.style.bottom = '-65px';
+    aboutBlockButton.classList.add('close');
+  } else {
+    nextItems.style.opacity = '0';
+    aboutBlockButton.innerHTML = 'More';
+    aboutBlockButton.style.bottom = '115px';
+    aboutBlockButton.classList.remove('close');
+  }
 };
 
 /***/ })

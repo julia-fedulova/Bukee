@@ -140,13 +140,44 @@
             <li class="header-list__item">
               <a href="#" class="header-list__link">Contact</a>
             </li>
-            <button type="button" class="primary-button button__menu_close">
-              Close
-            </button>
           </ul>
           <button class="button__menu" type="button">
             <i class="fas fa-bars"></i>
           </button>
+        </div>
+        <div class="burger-menu">
+          <ul class="burger-menu-list">
+            <li class="header-list__item">
+              <a href="#" class="header-list__link active">Home</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">About</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Contents</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Books</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Education</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Skills</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Portfolio</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Clients</a>
+            </li>
+            <li class="header-list__item">
+              <a href="#" class="header-list__link">Contact</a>
+            </li>
+            <button type="button" class="primary-button burger-menu-button">
+              Close
+            </button>
+          </ul>
         </div>
       </header>
       <div class="wrap">
@@ -297,10 +328,7 @@
               <li>Consectetur adipisicing elit</li>
               <li>Labore et dolore magna</li>
             </ol>
-            <ol
-              class="about-block-table__list about-block-table__list_next"
-              style="display: none"
-            >
+            <ol class="about-block-table__list about-block-table__list_next">
               <li>Lorem ipsum dolor sit amet</li>
               <li>Consectetur adipisicing elit</li>
               <li>Labore et dolore magna</li>
@@ -596,7 +624,7 @@
               placeholder="Enter your email"
             />
             <button
-              class="email-block-item__button"
+              class="primary-button email-block-item__button"
               type="button"
               name="button"
             >
@@ -621,18 +649,21 @@
           <div>
             <h2 class="footer-block__title">Useful Links</h2>
             <ul class="footer-block__list">
-              <li>About Bukee</li>
-              <li>Explore Our Ecosystem</li>
-              <li>Monthly Community Meetup</li>
-              <li>Privacy Policy</li>
+              <li><a href="">About Bukee</a></li>
+              <li><a href="">Explore Our Ecosystem</a></li>
+              <li><a href="">Monthly Community Meetup</a></li>
+              <li><a href="">Privacy Policy</a></li>
             </ul>
           </div>
           <div>
             <h2 class="footer-block__title">Our Contacts</h2>
             <ul class="footer-block__list">
               <li>Amphitheatre Parkway, CA, 94043</li>
-              <li>Call us on: +4455663322</li>
-              <li>Email: support@bukee.mail</li>
+              <li>Call us on: <a href="tel:+4455663322">+4455663322</a></li>
+              <li>
+                Email:
+                <a href="mailto:support@bukee.mail">support@bukee.mail</a>
+              </li>
             </ul>
             <ul class="footer-block__social">
               <li>
