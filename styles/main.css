@@ -1148,6 +1148,10 @@ h3 {
   flex-basis: 32%;
 }
 
+.blog-block-item:last-child {
+  margin-right: 0;
+}
+
 .blog-block-item__img {
   width: 100%;
   height: 224px;
@@ -1536,7 +1540,7 @@ h3 {
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1023px) {
   .arrow-up {
     right: 35px;
     bottom: 35px;
@@ -1594,9 +1598,18 @@ h3 {
     padding-bottom: 70px;
   }
 
+  .page_slider {
+    background-color: #44444f;
+    padding: 155px 0 175px;
+  }
+
   .page-email {
     padding-top: 120px;
     padding-bottom: 145px;
+  }
+
+  .page__svg {
+    display: none;
   }
 
   .ava-block__svg {
@@ -1627,6 +1640,54 @@ h3 {
 
   .about-block-text {
     margin-bottom: 70px;
+  }
+
+  .page-books {
+    padding: 120px 0 190px;
+  }
+
+  .page-books__button {
+    margin-top: 46px;
+  }
+
+  .block-books {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .block-books-item {
+    margin-bottom: 55px;
+  }
+
+  .block-books-item__title {
+    margin-top: 25px;
+  }
+
+  .block-books-item__description {
+    max-width: 550px;
+    margin: 16px auto;
+  }
+
+  .blog-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .blog-block-item {
+    margin: 0 auto 80px;
+    max-width: 75%;
+  }
+
+  .blog-block-item:last-child {
+    margin: 0 auto 80px;
+  }
+
+  .blog-block + .primary-button {
+    margin-top: 10px;
   }
 
   .email-block {
@@ -1660,130 +1721,7 @@ h3 {
   }
 }
 
-@media (max-width: 920px) {
-  .page_slider {
-    background-color: #44444f;
-    padding: 155px 0 175px;
-  }
-
-  .page__svg {
-    display: none;
-  }
-
-  .page-books {
-    padding: 120px 0 190px;
-  }
-
-  .page-books__button {
-    margin-top: 46px;
-  }
-
-  .block-books {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .block-books-item {
-    margin-bottom: 55px;
-  }
-
-  .block-books-item__title {
-    margin-top: 25px;
-  }
-
-  .block-books-item__description {
-    max-width: 550px;
-    margin: 16px auto;
-  }
-}
-
-@media (max-width: 900px) {
-  .blog-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .blog-block-item {
-    margin: 0 auto 80px;
-    max-width: 75%;
-  }
-
-  .blog-block + .primary-button {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 850px) {
-  .text-block {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .text-block__name_bottom {
-    margin-bottom: 5px;
-  }
-
-  .text-block__description {
-    margin-right: 0;
-  }
-
-  .text-block__button {
-    margin: 0 auto;
-  }
-
-  .text-block-item__button {
-    margin: 23px auto;
-  }
-
-  .page-events .ava-block {
-    margin: 0 auto 30px;
-  }
-
-  .author-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .author-block_reversed {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-
-  .ava-block {
-    width: 360px;
-    margin: 0 auto 70px;
-  }
-}
-
-@media (max-width: 800px) {
-  .page {
-    padding-top: 120px;
-    padding-bottom: 150px;
-  }
-
-  .email-block-item__input {
-    max-width: 80%;
-  }
-
-  .email-block-item__button {
-    max-width: 80%;
-  }
-
-  .footer {
-    padding: 125px 15px 90px;
-  }
-}
-
-@media (max-width: 780px) {
+@media (max-width: 768px) {
   .arrow-up {
     font-size: 0;
   }
@@ -1828,9 +1766,57 @@ h3 {
     height: 533px;
     background-size: contain;
   }
-}
 
-@media (max-width: 750px) {
+  .text-block {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .text-block__name_bottom {
+    margin-bottom: 5px;
+  }
+
+  .text-block__description {
+    margin-right: 0;
+  }
+
+  .text-block__button {
+    margin: 0 auto;
+  }
+
+  .text-block-item__button {
+    margin: 23px auto;
+  }
+
+  .page {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  .page-events .ava-block {
+    margin: 0 auto 30px;
+  }
+
+  .author-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-block_reversed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .ava-block {
+    width: 360px;
+    margin: 0 auto 70px;
+  }
+
   .counter-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1842,9 +1828,42 @@ h3 {
   .counter-block p {
     margin-bottom: 25px;
   }
-}
 
-@media (max-width: 720px) {
+  .about-block {
+    max-width: 95%;
+  }
+
+  .about-block-table__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-block-table__list {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+
+  .about-block-table__list_next::before {
+    display: none;
+  }
+
+  .about-block-table__button {
+    position: unset;
+  }
+
+  .email-block-item__input {
+    max-width: 80%;
+  }
+
+  .email-block-item__button {
+    max-width: 80%;
+  }
+
+  .footer {
+    padding: 125px 15px 90px;
+  }
+
   .footer-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1855,23 +1874,15 @@ h3 {
   }
 }
 
-@media (max-width: 700px) {
-  .about-block-table__list {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
-}
-
-@media (max-width: 540px) {
+@media (max-width: 480px) {
   .main-page {
     padding-bottom: 110px;
   }
 
   .book-block-img {
     margin: 0 auto;
-    width: 300px;
-    height: 460px;
+    width: 280px;
+    height: 435px;
   }
 
   .book-block-img__title {
@@ -1901,9 +1912,7 @@ h3 {
   .text-block__title span {
     font-size: 16px;
   }
-}
 
-@media (max-width: 480px) {
   .text-block-item {
     margin: 44px 0 0;
   }
@@ -1951,6 +1960,15 @@ h3 {
     margin-bottom: 2px;
   }
 
+  .about-block-table__list {
+    font-size: 12px;
+    flex-basis: 50%;
+  }
+
+  .about-block-table__list > li {
+    padding-left: 30px;
+  }
+
   .blog-block-item {
     margin: 0 auto 50px;
     max-width: 85%;
@@ -1970,12 +1988,6 @@ h3 {
 
   .footer {
     padding: 95px 15px 90px;
-  }
-}
-
-@media (max-width: 350px) {
-  .about-block-table__list {
-    font-size: 13px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
